@@ -1,0 +1,103 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import LastBlogs from '../components/LastBlogs.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+
+
+
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<!-- Hero Sextion -->
+				<div class="relative overflow-hidden bg-no-repeat bg-cover bg-center">
+					<div id="hero" class="max-h-[80vh]">
+						{heroImage && <img width={1920} height={510} src={heroImage} alt="" />}
+					</div>
+				</div>
+				<!-- Hero Section -->
+
+				<div class=" px-6 my-12 mx-auto flex flex-col items-center md:flex-row  max-w-screen-xl gap-24">
+					<div class="flex items-center justify-center w-full text-center md:text-left md:w-1/2 lg:w-4/5 ">
+						<div>
+							<div class="mb-5 border-b border-gray-200">
+								<div class="flex flex-wrap items-baseline -mt-2">
+									<h5><FormattedDate date={pubDate} />
+									{
+										updatedDate && (
+											<div class="last-updated-on">
+												Last updated on <FormattedDate date={updatedDate} />
+											</div>
+										)
+									}</h5>
+								</div>
+							</div>
+							<h1 class="text-4xl text-main">{title}</h1>
+							<br>
+							<slot />
+							<div class="items-center justify-center hidden md:block py-6">
+								{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+							</div>
+						</div>
+					</div>
+
+					<!-- Slidebar -->
+					<div class="w-full md:w-1/2 lg:w-1/5 flex items-center justify-center md:block sticky top-0">
+						<div class="text-center items-start">
+							<h6 class="mb-3 text-[#d9974d] text-2xl font-bold">Últimos Blogs</h6>
+							<div class="grid grid-cols-1 my-6">
+							{
+							posts.map((post) => (
+							<article class="relative overflow-hidden rounded-lg w-full">
+								<div class="flex flex-col mb-6 overflow-hidden cursor-pointer">
+									<div class="flex-shrink-0">
+										<a href={`/blog/${post.slug}/`}>
+											<img width={720} height={360} src={post.data.heroImage} class="object-cover w-full h-42 rounded-lg"  />
+										</a>
+									</div>
+									<div class="flex flex-col justify-between flex-1">
+										<div class="flex-1 ">
+											<a href={`/blog/${post.slug}/`}>
+												<div class="flex pt-3  text-xs tracking-wider text-gray-900">
+													<p><FormattedDate date={post.data.pubDate} /></p>
+												</div>
+											</a>
+											<a href={`/blog/${post.slug}/`}>
+												<h3 class="text-[#203264] pb-3 text-start text-lg font-bold">{post.data.title}</h3>
+											</a>
+										</div>
+									</div>
+								</div>
+							</article>
+							))
+							}
+							</div>
+						</div>
+					</div>
+				</div>	
+				
+				
+			</article>	
+		</main>
+		<Footer />
+	</body>
+</html>

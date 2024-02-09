@@ -1,0 +1,41 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Header title={SITE_TITLE} />
+        <main>
+            <div>
+        <section>
+            <div class="h-[50vh] bg-[url('/images/eiffel-tower-at-sunset-paris-france.webp')] bg-center bg-cover flex items-center flex-col justify-center relative">
+            </div>
+        </section>
+            <section class="container mx-auto w-11/12 max-w-screen-xl my-24">
+                    <div class="text-left col-span-2 my-auto mr-24">
+                        <h2 class="text-5xl text-[#d9974d] font-semibold tracking-wide custom-text-2">Aviso de Privacidad</h2>
+                        <p class="text-[#203264] pt-3 text-lg font-semibold tracking-wide custom-text-2">
+                            Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Eveniet tempore
+                            nisispis.Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Eveniet
+                            tempore nisispis.Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Eveniet
+                            tempore nisispis.Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Eveniet
+                            tempore nisispis.
+                        </p>
+                    </div>
+            </section>
+        </div>
+        </main>
+        <Footer />
+    </body>
+</html>

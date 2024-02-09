@@ -1,0 +1,495 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import LastBlogs from '../components/LastBlogs.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Banner from "../components/Banner.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Header title={SITE_TITLE} />
+        <main>
+            <Banner />
+            <div>
+
+            <section class="container mx-auto w-11/12 max-w-screen-xl lg:my-24 my-12">
+                <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-0 gap-6">
+                    <div class="lg:text-left text-center lg:col-span-2 my-auto lg:mr-24 mr-0">
+                        <h2 class="lg:text-5xl text-4xl text-[#d9974d] font-semibold tracking-wide custom-text-2 ">La <span class="custom-text">emoción </span>de viajar</h2>
+                        <p class="text-[#203264] pt-3 text-lg tracking-wide custom-text-2">
+                            Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Eveniet tempore
+                            nisispis.Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Eveniet
+                            tempore nisispis.Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Eveniet
+                            tempore nisispis.Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Eveniet
+                            tempore nisispis.
+                        </p>
+                        <div class="py-10">
+                            <a href="#" class="bg-transparent border border-[#d9974d] px-8 py-2 text-xl font-light text-[#d9974d] ">
+                                Nosotros
+                            </a> 
+                        </div>
+                    </div>
+                    <div class="my-auto">
+                        <img src="/images/jack-ward-rknrvCrfS1k-unsplash.jpg" class="h-[300px] w-full object-cover sm:h-[400px] mx-auto"/>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Porque hola europa -->
+            <section class="text-center my-10 bg-[#203264] lg:h-[50vh] h-[80vh]">
+                <div class=" lg:px-32 px-6 lg:py-24 py-16">
+                <h1 class="text-3xl text-white font-semibold tracking-wide custom-text-2">
+                    ¿Por que <span class="custom-text text-4xl">Hola</span><span class="custom-text-2"> Europa</span>?
+                </h1>
+                <p class="text-white pt-6 text-xl font-semibold tracking-wide custom-text-2">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Eveniet tempore nisi lore
+                    Lorem, ipsum dolor sit amet consectetur adipisicing 
+                    elit. Sapiente neque culpa magni laboriosam aliquam, 
+                    quasi deleniti consequuntur temporibus nisi eius, 
+                    earum architecto molestias enim, delectus exercitationem 
+                    ab dicta aut aspernatur.
+                </p>
+            </div>
+            </section>
+
+
+                <!-- Experiencias (bg-world bg-cover bg-center bg-no-repeat)-->
+                <section class="text-center my-10 ">
+                    <div class="pt-0 max-w-screen-xl mx-auto">
+                        <h2 class="text-6xl text-[#d9974d] font-semibold tracking-wide custom-text ">Destinos</h2>
+                        <h2 class="lg:text-3xl text-2xl text-[#d9974d] font-semibold tracking-wide custom-text-2 py-3 ">Viaja por el <span class="custom-text-2">mundo </span>con nosotros</h2>
+                        <div class=" px-4 sm:px-6 sm:my-12 lg:px-0 flex">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <a href="#" class="block ">
+                                        <img src="./images/basilica-of-santa-maria-della-salud-venice.webp" class="h-[300px] w-full object-cover sm:h-[450px]"/>
+                                            <div class="relative pt-3">
+                                                <h3 class="text-[#203264] pt-3 text-lg font-bold custom-text-3">
+                                                    Lorem ipsum, dolor sit
+                                                </h3>
+                                                <p class="mt-2">
+                                                    <span><i class="fa-solid fa-location-dot text-[#d9974d]"></i></span>
+                                                    <span class="tracking-wider text-gray-900 custom-text-2">
+                                                        Italia
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="block">
+                                            <img src="./images/closeup-shot-of-cochem-streets-in-germany.webp" class="h-[300px] w-full object-cover sm:h-[450px]"/>
+                                            <div class="relative pt-3">
+                                                <h3 class="text-[#203264] pt-3 text-lg font-bold custom-text-3">
+                                                    Lorem ipsum, dolor sit
+                                                </h3>
+                                                <p class="mt-2">
+                                                    <span><i class="fa-solid fa-location-dot text-[#d9974d]"></i></span>
+                                                    <span class="tracking-wider text-gray-900 custom-text-2">
+                                                        Alemania
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="block">
+                                            <img src="./images/largest-stadium-of-barcelona-from-helicopter-catalonia.webp" class="h-[300px] w-full object-cover sm:h-[450px]"/>
+                                            <div class="relative pt-3">
+                                                <h3 class="text-[#203264] pt-3 text-lg font-bold custom-text-3">
+                                                    Lorem ipsum, dolor sit
+                                                </h3>
+                                                <p class="mt-2">
+                                                    <span><i class="fa-solid fa-location-dot text-[#d9974d]"></i></span>
+                                                    <span class="tracking-wider text-gray-900 custom-text-2">
+                                                        España
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="block">
+                                            <img src="./images/beautiful-view-of-lake-surrounded-by-mountains-in-longrin-lake-and-dam-switzerland.webp" class="h-[300px] w-full object-cover sm:h-[450px]"/>
+                                            <div class="relative pt-3">
+                                                <h3 class="text-[#203264] pt-3 text-lg font-bold custom-text-3">
+                                                    Lorem ipsum, dolor sit
+                                                </h3>
+                                                <p class="mt-2">
+                                                    <span><i class="fa-solid fa-location-dot text-[#d9974d]"></i></span>
+                                                    <span class="tracking-wider text-gray-900 custom-text-2">
+                                                        Suiza
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+
+
+                <!-- <div class="bg-[#203264] py-24">
+                    <h2 class="text-center text-4xl md:text-6xl text-[#d9974d] font-semibold tracking-wide pb-12 max-w-[700px] mx-auto">
+                        Pasos para planear una experiencia inigualable
+                    </h2>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-4 container w-11/12 mx-auto gap-20 md:gap-10">
+                        <div class="flex flex-col items-center justify-start text-center gap-3">
+                            <p class="bg-[#d9974d] text-[#203264] text-xl h-10 w-10 rounded-full flex items-center justify-center font-bold">
+                                1 </p>
+                            <i class="fa-solid fa-calendar text-5xl my-4 text-white"></i>
+                            <h4 class="text-2xl text-[#d9974d] font-bold tracking-wide mb-3">
+                                Elige tu destino soñado y las fechas
+                            </h4>
+                            <p class="text-white">
+                                En este queremos que nos cuentes a dónde y con
+                                quién quiereres viajar y si quisieras realizar
+                                algo en especial, algo para completar tu
+                                aventura
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center justify-start text-center gap-3">
+                            <p class="bg-[#d9974d] text-[#203264] text-xl h-10 w-10 rounded-full flex items-center justify-center font-bold">
+                                2 </p>
+                            <i class="fa-solid fa-compass text-5xl my-4 text-white"></i>
+                            <h4 class="text-2xl text-[#d9974d] font-bold tracking-wide mb-3">
+                                Espera tu propuesta
+                            </h4>
+                            <p class="text-white">
+                                En base a tus requerimentos diseñaremos tu viaje
+                                soñado, el cuál te mandaremos para tu aprobación
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center justify-start text-center gap-3">
+                            <p class="bg-[#d9974d] text-[#203264] text-xl h-10 w-10 rounded-full flex items-center justify-center font-bold">
+                                3 </p>
+                            <i class="fa-solid fa-earth-americas text-5xl my-4 text-white"></i>
+                            <h4 class="text-2xl text-[#d9974d] font-bold tracking-wide mb-3">
+                                Ilusiónate de tu próximo viaje y haz tus maletas
+                            </h4>
+                            <p class="text-white">
+                                Cuándo estes 100% convencido de que es tu viaje
+                                soñado, empezamos a revisar detalles como
+                                pasaporte, visas, pagos y recomendaciones
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center justify-start text-center gap-3">
+                            <p class="bg-[#d9974d] text-[#203264] text-xl h-10 w-10 rounded-full flex items-center justify-center font-bold">
+                                4 </p>
+                            <i class="fa-solid fa-person-walking-luggage text-5xl my-4 text-white"></i>
+                            <h4 class="text-2xl text-[#d9974d] font-bold tracking-wide mb-3">
+                                Disfruta la experiencia Hola Europa!
+                            </h4>
+                            <p class="text-white">
+                                !Bienvenido a tu nueva experiencia con Hola
+                                Europa!
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Agenda rapido -->
+                <section class="items-center justify-center lg:py-12 py-8">
+                    <div class="text-center">
+                        <h1 class="lg:text-6xl text-3xl text-[#d9974d] font-semibold tracking-wide custom-text">
+                            Contacto
+                        </h1>
+                        <div class="lg:pt-12 pt-6 lg:w-[50vw] w-[90vw] m-auto">
+                            <div class="pb-6">
+                                <div class="flex gap-6">
+                                    <h1 class="text-[#d9974d] my-auto custom-text-2">NOMBRE</h1>
+                                    <input type="text" class="w-full bg-transparent rounded-full border border-[#d9974d] focus:ring-2 focus:ring-[#d9974d] text-white outline-none text-white py-1 px-3 leading-8"/>
+                                </div>
+                            </div>
+                            <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 pb-6">
+                                <div class="flex gap-10">
+                                    <h1 class="text-[#d9974d] my-auto custom-text-2">FECHA</h1>
+                                    <input type="text" class="w-full bg-transparent rounded-full border border-[#d9974d] focus:ring-2 focus:ring-[#d9974d] text-white outline-none text-white py-1 px-3 leading-8"/>
+                                </div>
+                                <div class="flex lg:gap-10 gap-3 justify-end">
+                                    <h1 class="text-[#d9974d] my-auto custom-text-2">
+                                        PAÍSES A VISITAR
+                                    </h1>
+                                    <div class="flex gap-3">
+                                        <button class="rounded-full text-[#d9974d] border border-[#d9974d] py-2 px-4 focus:bg-[#d9974d] custom-text-2">1</button>
+                                        <button
+                                            class="rounded-full text-[#d9974d] border border-[#d9974d] py-2 px-4 focus:bg-[#d9974d] custom-text-2"
+                                            >2</button
+                                        >
+                                        <button
+                                            class="rounded-full text-[#d9974d] border border-[#d9974d] py-2 px-4 focus:bg-[#d9974d] custom-text-2"
+                                            >3</button
+                                        >
+                                        <button
+                                            class="rounded-full text-[#d9974d] border border-[#d9974d] py-2 px-4 focus:bg-[#d9974d] custom-text-2"
+                                            >4</button
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="grid lg:grid-cols-2 grid-cols-1 gap-6 pb-6"
+                            >
+                                <div class="flex gap-3">
+                                    <h1 class="text-[#d9974d] my-auto custom-text-2">TELÉFONO</h1>
+                                    <input
+                                        type="text"
+                                        class="w-full bg-transparent rounded-full border border-[#d9974d] focus:ring-2 focus:ring-[#d9974d] text-white outline-none text-white py-1 px-3 leading-8"
+                                    />
+                                </div>
+                                <div class="flex gap-6">
+                                    <h1 class="text-[#d9974d] my-auto custom-text-2">CORREO</h1>
+                                    <input
+                                        type="text"
+                                        class="w-full bg-transparent rounded-full border border-[#d9974d] focus:ring-2 focus:ring-[#d9974d] text-white outline-none text-white py-1 px-3 leading-8"
+                                    />
+                                </div>
+                            </div>
+                            <div class="flex justify-center gap-6 py-3">
+                                <button
+                                    class="rounded-full text-white bg-[#d9974d] border border-[#d9974d] py-2 px-12 custom-text-2"
+                                    >ENVIAR</button
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+<!-- Seccion reseñas de clientes -->
+    <section>
+        <div class="mx-auto max-w-screen-xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+            <h2 class="text-5xl text-[#d9974d] text-center font-semibold tracking-wide sm:text-5xl custom-text">
+                Reseñas de Clientes       
+            </h2>
+            <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+                <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                    <!-- <img class="h-[50vh] object-cover w-full mb-3" src="https://images.unsplash.com/photo-1694617787254-4ad01e5b552c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt=""> -->
+                <div class="flex items-center gap-4 ">
+                    <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="h-14 w-14 rounded-full object-cover"/>
+                    <div>
+                        <p class="mt-0.5 text-lg font-medium text-[#203264] custom-text-2">Paul González</p>
+                        <div class="flex justify-start gap-0.5 text-green-500">
+                            <p class="mt-0.5 text-sm font-light text-gray-900 pr-2">14 Sep 2023 </p>
+                            <img width="24" height="24" src="https://img.icons8.com/color/48/mexico.png" alt="mexico"/>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-4 text-gray-700 custom-text-2">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit
+                    rerum incidunt, a consequuntur recusandae ab saepe illo est quia
+                    obcaecati neque quibusdam eius accusamus error officiis atque
+                    voluptates magnam!
+                </p>
+                </blockquote>
+                <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="h-14 w-14 rounded-full object-cover"/>
+                        <div>
+                            <p class="mt-0.5 text-lg font-medium text-[#203264] custom-text-2">Emilio García</p>
+                            <div class="flex justify-start gap-0.5 text-green-500">
+                                <p class="mt-0.5 text-sm font-light text-gray-900 pr-2">15 Sep 2023 </p>
+                                <img width="24" height="24" src="https://img.icons8.com/fluency/48/colombia.png" alt="colombia"/>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-700 custom-text-2">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit
+                        rerum incidunt, a consequuntur recusandae ab saepe illo est quia
+                        obcaecati neque quibusdam eius accusamus error officiis atque
+                        voluptates magnam!
+                    </p>
+                </blockquote>
+                <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="h-14 w-14 rounded-full object-cover"/>
+                        <div>
+                            <p class="mt-0.5 text-lg font-medium text-[#203264] custom-text-2">Henry Smith</p>
+                            <div class="flex justify-start gap-0.5 text-green-500">
+                                <p class="mt-0.5 text-sm font-light text-gray-900 pr-2">16 Sep 2023 </p>
+                                <img width="24" height="24" src="https://img.icons8.com/color/48/usa.png" alt="usa"/>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-700 custom-text-2">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit
+                        rerum incidunt, a consequuntur recusandae ab saepe illo est quia
+                        obcaecati neque quibusdam eius accusamus error officiis atque
+                        voluptates magnam!
+                    </p>
+                </blockquote>        
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Reviews bg-[url('/images/patron1.webp')] -->
+    <section class="text-center my-8 bg-cover bg-center bg-no-repeat">
+        <div class="relative text-center">
+            <h2 class="text-6xl text-[#d9974d] font-semibold tracking-wide custom-text">
+                Experiencias
+            </h2>
+            <p class="text-[#203264] pt-6 text-lg font-semibold tracking-wide custom-text-2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing
+                elit. Eveniet tempore nisi reprehenderit, placeat
+            </p>
+            <div class="max-w-screen-xl px-4 py-14 mx-auto sm:px-6 sm:py-12 lg:px-8 flex">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="block">
+                                <img src="https://images.unsplash.com/photo-1694617787254-4ad01e5b552c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" class="h-[300px] w-full object-contain sm:h-[400px]"/>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block">
+                                <img src="https://images.unsplash.com/photo-1694618956429-09f5b1220e07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" class="h-[300px] w-full object-contain sm:h-[400px]"/>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block">
+                                <img src="https://images.unsplash.com/photo-1518285384707-4829d8e89071?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1653&q=80" class="h-[300px] w-full object-contain sm:h-[400px]"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- If we need scrollbar -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Blogs -->
+    <section>
+        <LastBlogs />
+    </section>
+
+    
+    <!-- Seccion Newletter -->
+    <section class="relative bg-[url('/images/colosseum-in-rome-at-dusk.webp')] bg-cover bg-center bg-no-repeat h-[70vh]">
+        <div class="absolute inset-0 bg-black/60 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
+        <div class="relative p-8 py-20 lg:py-28 ">
+            <div class="mx-auto max-w-lg text-center">
+                <h2 class="text-[#d9974d] text-5xl font-bold tracking-wide custom-text-3">Newsletter</h2>
+                <p class="text-white mt-4 block custom-text-2">
+                    Apúntate a nuestra newsletter y podrás conocer todas nuestras novedadese inspiración para tu viaje de ensueño.
+                </p>
+            </div>
+            <div class="mx-auto mt-8 max-w-xl">
+                <form action="#" class="flex">
+                    <div class="flex-1">
+                        <input type="email" class="w-full bg-transparent rounded-l-full border border-[#d9974d]  focus:ring-2 focus:ring-[#d9974d] outline-none text-white py-1 px-3 leading-8"/>
+                    </div>
+                    <button type="submit" class="group bg-transparent rounded-r-full border border-[#d9974d] text-white py-1 px-3 leading-8 focus:bg-[#d9974d]">
+                        <span class="text-sm font-medium custom-text-2">SUSCRIBIRME </span>
+                    </button>
+                </form>
+            </div>
+            <div class="flex items-center justify-center pt-6">
+                <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="link-checkbox" class="ml-2 text-sm font-medium text-white">He leído y acepto los <a href="#" class="text-[#d9974d] hover:underline">términos y condiciones</a>.</label>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Seccion instagram -->
+    <section class=" my-20 w-[87%] mx-auto">
+        
+        <div class="grid lg:grid-cols-2 grid-cols-1">
+            <div>
+                <h1 class="text-xl text-[#203264] tracking-wide custom-text-3 text-center lg:text-start">
+                    SÍGUENOS EN @HOLAEUROPA
+                </h1>
+                <p class="text-lg text-black tracking-wide custom-text-2 text-center lg:text-start">Experiencias de viajes para todo tipo</p>
+            </div>
+            <div class="lg:justify-self-end justify-self-center px-6 lg:pt-0 pt-3">
+                <div class=" text-[#203264] flex gap-12 text-3xl">
+                    <a href="https://www.facebook.com/" target="_blank"
+                    ><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"
+                    ><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class=" grid lg:grid-cols-5 grid-cols-1 gap-6 pt-6">
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/alexandre-chambon-aapSemzfsOk-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full ">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Secuencia" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="22" role="img" viewBox="0 0 48 48" width="22"><title>Secuencia</title><path d="M34.8 29.7V11c0-2.9-2.3-5.2-5.2-5.2H11c-2.9 0-5.2 2.3-5.2 5.2v18.7c0 2.9 2.3 5.2 5.2 5.2h18.7c2.8-.1 5.1-2.4 5.1-5.2zM39.2 15v16.1c0 4.5-3.7 8.2-8.2 8.2H14.9c-.6 0-.9.7-.5 1.1 1 1.1 2.4 1.8 4.1 1.8h13.4c5.7 0 10.3-4.6 10.3-10.3V18.5c0-1.6-.7-3.1-1.8-4.1-.5-.4-1.2 0-1.2.6z"></path></svg>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/atikh-bana-Ycds6emp7BA-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Secuencia" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="22" role="img" viewBox="0 0 48 48" width="22"><title>Secuencia</title><path d="M34.8 29.7V11c0-2.9-2.3-5.2-5.2-5.2H11c-2.9 0-5.2 2.3-5.2 5.2v18.7c0 2.9 2.3 5.2 5.2 5.2h18.7c2.8-.1 5.1-2.4 5.1-5.2zM39.2 15v16.1c0 4.5-3.7 8.2-8.2 8.2H14.9c-.6 0-.9.7-.5 1.1 1 1.1 2.4 1.8 4.1 1.8h13.4c5.7 0 10.3-4.6 10.3-10.3V18.5c0-1.6-.7-3.1-1.8-4.1-.5-.4-1.2 0-1.2.6z"></path></svg>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/etienne-boulanger-6-KiGzRZoeg-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Vídeo" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="18" role="img" viewBox="0 0 24 24" width="18"><title>Vídeo</title><path d="M5.888 22.5a3.46 3.46 0 0 1-1.721-.46l-.003-.002a3.451 3.451 0 0 1-1.72-2.982V4.943a3.445 3.445 0 0 1 5.163-2.987l12.226 7.059a3.444 3.444 0 0 1-.001 5.967l-12.22 7.056a3.462 3.462 0 0 1-1.724.462Z"></path></svg>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/mathew-schwartz-Kyxejaf39vM-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Secuencia" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="22" role="img" viewBox="0 0 48 48" width="22"><title>Secuencia</title><path d="M34.8 29.7V11c0-2.9-2.3-5.2-5.2-5.2H11c-2.9 0-5.2 2.3-5.2 5.2v18.7c0 2.9 2.3 5.2 5.2 5.2h18.7c2.8-.1 5.1-2.4 5.1-5.2zM39.2 15v16.1c0 4.5-3.7 8.2-8.2 8.2H14.9c-.6 0-.9.7-.5 1.1 1 1.1 2.4 1.8 4.1 1.8h13.4c5.7 0 10.3-4.6 10.3-10.3V18.5c0-1.6-.7-3.1-1.8-4.1-.5-.4-1.2 0-1.2.6z"></path></svg>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/nils-nedel-ONpGBpns3cs-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Vídeo" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="18" role="img" viewBox="0 0 24 24" width="18"><title>Vídeo</title><path d="M5.888 22.5a3.46 3.46 0 0 1-1.721-.46l-.003-.002a3.451 3.451 0 0 1-1.72-2.982V4.943a3.445 3.445 0 0 1 5.163-2.987l12.226 7.059a3.444 3.444 0 0 1-.001 5.967l-12.22 7.056a3.462 3.462 0 0 1-1.724.462Z"></path></svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+        </div>
+        </main>
+        <Footer />
+        <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="../app.js"></script>
+    </body>
+</html>

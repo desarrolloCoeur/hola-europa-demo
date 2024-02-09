@@ -1,0 +1,128 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<body>
+	<header class="fixed z-10 w-full pt-6 transition duration-700 ease-in-out lg:bg-transparent bg-[#203264]">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 ">
+        <div class="flex h-full items-center justify-between">
+            <div class="w-full md:flex md:items-center md:gap-12 md:justify-center">
+
+                <div class="flex items-center gap-12 text-ms uppercase md:hidden justify-around" >
+                    <a href=""></a>
+                    <a class="text-white transition hover:text-[#d9974d] pl-8 pb-6" href="#">
+                        <img class="h-14 md:h-20 md:object-contain" src="/images/logo-holaeuropa.png" alt="Logo Hola Europa">
+                    </a>
+                    <a id="btnMenu" class="text-white text-2xl transition  pb-6 hover:text-[#d9974d]" href="#"><i class="fa-solid fa-bars"></i></a>
+                </div>
+                
+                <nav aria-label="Global" class="hidden md:block">
+                    <ul class="flex items-center gap-12 text-ms uppercase m-0 p-0">
+                        <li>
+                            <a class="text-white transition hover:text-[#d9974d] hover:no-underline" href="#destinos">Destinos</a>
+                        </li>
+                        <li>
+                            <a class="text-white transition hover:text-[#d9974d] hover:no-underline" href="#experiencias">Experiencias</a>
+                        </li>
+                        <li>
+                            <a class="text-white transition hover:text-[#d9974d] hover:no-underline" href="#blog">Blog</a>
+                        </li>
+                        <li>
+                            <div class="flex items-center mb-6">
+                                <a class="block" href="#">
+                                    <img class="md:w-28 lg:w-36" src="/images/logo-holaeuropa.png" alt="Logo Hola Europa">
+                                </a>
+                            </div>
+                        </li>
+                        <li> 
+                            <a class="text-white transition hover:text-[#d9974d] hover:no-underline" href="#nosotros">Nosotros</a>
+                        </li>
+                        
+                        <li>
+                            <a class="text-white transition hover:text-[#d9974d] hover:no-underline" href="#contacto">Contacto</a>
+                        </li>
+                        <li>
+                            <a class="text-white transition hover:text-[#eea62c] text-xl" href="#"><img width="48" height="48" src="https://img.icons8.com/color/48/usa.png" alt="usa"/></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <nav id="menu" class="hidden h-screen items-start pt-20 bg-[#203264]">
+            <ul class="flex gap-6 uppercase text-2xl flex-col justify-center items-center">
+                <li>
+                    <a class="text-white transition hover:text-[#d9974d]" href="#destinos">Destinos</a>
+                </li>
+                <li>
+                    <a class="text-white transition hover:text-[#d9974d]" href="#experiencias">Experiencias</a>
+                </li>
+                <li>
+                    <a class="text-white transition hover:text-[#d9974d]" href="#blog">Blog</a>
+                </li>
+                <li> 
+                    <a class="text-white transition hover:text-[#d9974d]" href="#nosotros">Nosotros</a>
+                </li>
+                <li>
+                    <a class="text-white transition hover:text-[#d9974d]" href="#contacto">Contacto</a>
+                </li>
+                <li>
+                    <a class="text-white transition hover:text-[#eea62c] text-xl" href="#">
+                        <img class="w-full" src="https://img.icons8.com/color/48/usa.png" alt="usa"/>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+	</header>
+
+	<script type="text/javascript">
+		window.addEventListener("scroll", function(){
+			var header = document.querySelector("header");
+			header.classList.toggle("abajo",window.scrollY>0);
+		})
+
+        const btnMenu = document.querySelector("#btnMenu");
+        const menu = document.querySelector("#menu");
+        const menuLinks = document.querySelectorAll("#menu a")
+        let isActive = false;
+
+        btnMenu.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            if(!isActive){
+                menu.classList.add("flex","justify-center")
+                menu.classList.remove("hidden");
+                isActive = true;
+                btnMenu.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+            } else {
+                menu.classList.remove("flex","justify-center")
+                menu.classList.add("hidden");
+                isActive = false;
+                btnMenu.innerHTML = `<i class="fa-solid fa-bars"></i>`
+            }
+            
+        })
+
+menuLinks.forEach((link) => {
+    link.addEventListener("click", (e) =>{
+        menu.classList.remove("flex","justify-center")
+        menu.classList.add("hidden");
+        isActive = false;
+        btnMenu.innerHTML = `<i class="fa-solid fa-bars"></i>`
+
+    })
+})
+
+
+	</script>
+	<style>
+		header.abajo{
+			background:#203264;
+		}
+		header.abajo .logo,
+		header.abajo ul li a{
+			color: #fff;
+		}
+	</style>

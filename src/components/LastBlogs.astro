@@ -1,0 +1,112 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+<div class="container mx-auto w-11/12 max-w-screen-xl my-12">
+    <h2 class="text-6xl text-[#d9974d] font-semibold tracking-wide text-center custom-text">Descubre más</h2>
+    <p class="text-4xl text-[#d9974d] pt-2 text-center ">Lecturas de viaje</p>
+    <!-- <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 my-12"> -->
+        
+        <!-- {
+            posts.map((post) => (
+            <article class="relative overflow-hidden  w-full">
+
+                <div class="flex flex-col mb-12 overflow-hidden cursor-pointer">
+                    <div class="flex-shrink-0">
+                        <a href={`/blog/${post.slug}/`}>
+                            <img width={720} height={360} src={post.data.heroImage} alt="" class="object-cover w-full h-52 "  />
+                        </a>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1">
+                        <div class="flex-1">
+                            <a href={`/blog/${post.slug}/`}>
+                                <div class="flex pt-6  text-sm tracking-wider text-gray-900 ">
+                                    <p><FormattedDate date={post.data.pubDate} /></p>
+                                </div>
+                            </a>
+                            <a href={`/blog/${post.slug}/`}>
+                                <h3 class="text-[#203264] py-1 text-xl font-bold custom-text-2">{post.data.title}</h3>
+                                <p class="tex-base text-gray-900 custom-text-2">{post.data.description}</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+            ))
+        } -->
+
+    <!-- </div> -->
+
+    <div class="grid lg:grid-cols-5 grid-cols-1 gap-16 py-12">
+        <div class="lg:col-span-3">
+            <a href="/blog/destinos-ideales-para-niños/">
+                <img width={720} height={50} src="/images/torsten-dederichs-XRcEsQKTWGk-unsplash.jpg" alt="" class="object-cover w-full lg:h-[165vh] h-[35vh] object-center"  />
+                <div class="flex flex-col justify-between flex-1">
+                    <div class="flex-1">
+                        <div class="flex pt-6 text-sm tracking-wider text-gray-900 ">
+                            <p>Sep 11, 2023</p>
+                        </div>
+                        <h3 class="text-[#203264] py-3 text-2xl font-bold custom-text-2">Europa en Familia: Destinos Ideales para Niños</h3>
+                        <p class="text-lg text-gray-900 custom-text-2">¿Estás planeando unas vacaciones familiares en Europa? ¡No busques más! Europa ofrece una gran variedad de...</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div  class="lg:col-span-2">
+            <div>
+                <a href="/blog/destinos-mas-emblematicos/">
+                    <img width={720} height={360} src="/images/calvin-hanson-POqJeWrVfnU-unsplash.jpg" alt="" class="object-cover w-full h-[35vh] "  />
+                    <div class="flex flex-col justify-between flex-1">
+                        <div class="flex-1">
+                            <div class="flex pt-6 text-sm tracking-wider text-gray-900 ">
+                                <p>Sep 11, 2023</p>
+                            </div>
+                            <h3 class="text-[#203264] py-3 text-2xl font-bold custom-text-2">Descubre la Magia de Europa: Un Viaje a los Destinos más Emblemáticos</h3>
+                            <p class="text-lg text-gray-900 custom-text-2">En esta entrada, te invitamos a explorar algunos de los destinos más icónicos de Europa...</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="pt-6">
+                <a href="/blog/tu-proximo-destino-de-viaje/">
+                    <img width={720} height={360} src="/images/joss-woodhead-3wFRlwS91yk-unsplash.jpg" alt="" class="object-cover w-full h-[35vh] "  />
+                    <div class="flex flex-col justify-between flex-1">
+                        <div class="flex-1">
+                            <div class="flex pt-6 text-sm tracking-wider text-gray-900 ">
+                                <p>Sep 11, 2023</p>
+                            </div>
+                            <h3 class="text-[#203264] py-3 text-2xl font-bold custom-text-2">Europa: Tu Próximo Destino de Viaje</h3>
+                            <p class="text-lg text-gray-900 custom-text-2">Europa, el continente de la historia rica, la diversidad cultural y la belleza natural asombrosa, te espera para una aventura inolvidable.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="pt-6">
+                <a href="/blog/descubre-el-encanto-oculto-de-los-viajes-explora-el-mundo/">
+                    <img width={720} height={360} src="/images/idan-gil-_rr77_q3Zvk-unsplash.jpg" alt="" class="object-cover w-full h-[35vh] "  />
+                    <div class="flex flex-col justify-between flex-1">
+                        <div class="flex-1">
+                            <div class="flex pt-6 text-sm tracking-wider text-gray-900 ">
+                                <p>Sep 11, 2023</p>
+                            </div>
+                            <h3 class="text-[#203264] py-3 text-2xl font-bold custom-text-2">Descubre el Encanto Oculto de los Viajes: Explora el Mundo</h3>
+                            <p class="text-lg text-gray-900 custom-text-2">¿Hay algo más emocionante que empacar tus maletas y embarcarte en una aventura hacia lo desconocido?...</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+

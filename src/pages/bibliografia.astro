@@ -1,0 +1,206 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Storytelling from "../components/Storytelling.astro"
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Bannerbiografia from "../components/Banner-biografia.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Header title={SITE_TITLE} />
+        <main>
+            <Bannerbiografia />
+            <div>
+
+                <!-- Bibliografia -->
+            <section class="mx-auto w-11/12 max-w-screen-xl lg:my-24 my-12">
+                <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-0 gap-6">
+                    <div class="lg:text-left text-center lg:col-span-2 my-auto lg:mr-16 mr-0">
+                        <h2 class="lg:text-5xl text-4xl text-[#d9974d] font-semibold tracking-wide custom-text-2 ">Detrás de Hola Europa: <span class="custom-text">Mi historia </span></h2>
+                        <p class="text-[#203264] pt-6 text-lg tracking-wide custom-text-2 text-justify text-black">
+                            ¡Hola! Soy Ana Cecilia Ávila, la mente y el corazón detrás de Hola Europa,
+                            la agencia de viajes y estudios en Europa que está lista para hacer realidad
+                            tus sueños de viaje y educación en el viejo continente.
+                        </p>
+                        <p class="text-[#203264] pt-6 text-lg tracking-wide custom-text-2 text-justify text-black">
+                            Desde mi nacimiento en Tepic, México, el 6 de marzo de 1991, siempre he tenido 
+                            una conexión profunda con el mundo. Mi viaje comenzó con una licenciatura en 
+                            Administración de Negocios en Guadalajara, México, pero mi sed de conocimiento y 
+                            mi pasión por explorar el mundo me llevaron mucho más lejos.
+                        </p>                        
+                        <p class="text-[#203264] pt-6 text-lg tracking-wide custom-text-2 text-justify text-black">
+                            Mis raíces familiares jugaron un papel fundamental en mi camino. Criada como la 
+                            mediana de tres hermanos, aprendí valores invaluables y el amor por el trabajo 
+                            desde mis padres. Mi padre, un ingeniero industrial y empresario, fundó su propia 
+                            empresa hace 30 años, mientras que mi madre, una comunicóloga, escritora y maestra 
+                            de idiomas, dedicó tres décadas a la enseñanza en la facultad de turismo de Nayarit. 
+                            Esta herencia me llevó a desarrollar un profundo interés en el sector turístico.
+                        </p>
+                    </div>
+                    <div class="my-auto">
+                        <img src="/images/cecilia4.webp" class="h-[300px] w-full object-cover sm:h-[450px] mx-auto"/>
+                    </div>
+                </div>
+
+                <p class="text-[#203264] pt-6 text-lg tracking-wide custom-text-2 text-justify text-black">
+                    En el 2021, tomé un vuelo hacia España para perseguir un Global MBA en la prestigiosa 
+                    Universidad de Salamanca. Durante mi estancia en España, me adentré en el emocionante 
+                    mundo del "Neuro Turismo", una disciplina que combina la psicología y el turismo para 
+                    crear experiencias de viaje memorables. Esta experiencia me ayudó a comprender la 
+                    profunda conexión entre la mente y los viajes, y cómo los lugares pueden tocar 
+                    nuestras almas de maneras inesperadas.
+                </p>
+
+                <p class="text-[#203264] pt-6 text-lg tracking-wide custom-text-2 text-justify text-black">
+                    Mi amor por los idiomas también se convirtió en una parte esencial de mi vida. A lo 
+                    largo de los años, he estudiado en Estados Unidos, Bélgica e Italia, lo que me ha 
+                    permitido dominar cuatro idiomas: español, inglés, francés e italiano. Esta habilidad 
+                    lingüística me ha brindado la oportunidad de conectar con personas de diferentes culturas 
+                    y comprender la verdadera esencia de un lugar.
+                </p>
+
+                <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-6 pt-12">
+                    <div class="my-auto">
+                        <img src="/images/cecilia2.webp" class="h-[300px] w-full object-cover sm:h-[300px] mx-auto"/>
+                    </div>
+                    <div class="lg:text-left text-center lg:ml-16 ml-0">
+                        <p class="text-[#203264] text-lg tracking-wide custom-text-2 text-justify text-black">
+                            Durante mi vida, siempre he alentado a mis seres queridos y amigos a explorar 
+                            el mundo. Desde 2012, he estado diseñando viajes personalizados para ellos, 
+                            guiándolos antes, durante y después de sus aventuras. Cada sonrisa, cada recuerdo 
+                            y cada transformación que he visto en ellos me ha inspirado a seguir mi pasión. 
+                            Finalmente, en 2022, decidí que era hora de llevar mi pasión al siguiente nivel. 
+                            Fundé Hola Europa, una empresa con un propósito claro: facilitar viajes y estudios 
+                            en Europa de calidad y personalizados. Mi objetivo es tocar la vida de las personas 
+                            de manera positiva, brindándoles experiencias que transformen sus vidas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 grid-cols-1 lg:gap-16 gap-6 lg:pt-24 pt-12">
+                    <div class="lg:col-span-3">
+                        <div>
+                            <img width={720} height={50} src="images/cecilia1.webp" alt="" class="object-cover w-full lg:h-[134vh] h-[65vh] object-center"  />
+                        </div>
+                    </div>
+                    <div  class="lg:col-span-2">
+                        <div>
+                            <img width={720} height={360} src="images/cecilia5.webp" alt="" class="object-cover w-full h-[65vh] "  />
+                        </div>
+            
+                        <div class="pt-6">
+                            <img width={720} height={360} src="images/cecilia3.webp" alt="" class="object-cover w-full h-[65vh] "  />
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+    <!--Storytelling -->
+    <Storytelling />
+
+    
+    <!-- Seccion Newletter -->
+    <section class="relative bg-[url('/images/colosseum-in-rome-at-dusk.webp')] bg-cover bg-center bg-no-repeat h-[70vh]">
+        <div class="absolute inset-0 bg-black/60 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
+        <div class="relative p-8 py-20 lg:py-28 ">
+            <div class="mx-auto max-w-lg text-center">
+                <h2 class="text-[#d9974d] text-5xl font-bold tracking-wide custom-text-3">Newsletter</h2>
+                <p class="text-white mt-4 block custom-text-2">
+                    Apúntate a nuestra newsletter y podrás conocer todas nuestras novedadese inspiración para tu viaje de ensueño.
+                </p>
+            </div>
+            <div class="mx-auto mt-8 max-w-xl">
+                <form action="#" class="flex">
+                    <div class="flex-1">
+                        <input type="email" class="w-full bg-transparent rounded-l-full border border-[#d9974d]  focus:ring-2 focus:ring-[#d9974d] outline-none text-white py-1 px-3 leading-8"/>
+                    </div>
+                    <button type="submit" class="group bg-transparent rounded-r-full border border-[#d9974d] text-white py-1 px-3 leading-8 focus:bg-[#d9974d]">
+                        <span class="text-sm font-medium custom-text-2">SUSCRIBIRME </span>
+                    </button>
+                </form>
+            </div>
+            <div class="flex items-center justify-center pt-6">
+                <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="link-checkbox" class="ml-2 text-sm font-medium text-white">He leído y acepto los <a href="#" class="text-[#d9974d] hover:underline">términos y condiciones</a>.</label>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Seccion instagram -->
+    <section class=" my-20 w-[87%] mx-auto">
+        
+        <div class="grid lg:grid-cols-2 grid-cols-1">
+            <div>
+                <h1 class="text-xl text-[#203264] tracking-wide custom-text-3 text-center lg:text-start m-0">
+                    SÍGUENOS EN @HOLAEUROPA
+                </h1>
+                <p class="text-lg text-black tracking-wide custom-text-2 text-center lg:text-start m-0">Experiencias de viajes para todo tipo</p>
+            </div>
+            <div class="lg:justify-self-end justify-self-center px-6 lg:pt-0 pt-3">
+                <div class=" text-[#203264] flex gap-12 text-3xl">
+                    <a class="text-[#203264] hover:text-[#203264] hover:no-underline" href="https://www.facebook.com/" target="_blank"
+                    ><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="text-[#203264] hover:text-[#203264] hover:no-underline" href="https://www.instagram.com/" target="_blank"
+                    ><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class=" grid lg:grid-cols-5 grid-cols-1 gap-6 pt-6">
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/alexandre-chambon-aapSemzfsOk-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full ">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Secuencia" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="22" role="img" viewBox="0 0 48 48" width="22"><title>Secuencia</title><path d="M34.8 29.7V11c0-2.9-2.3-5.2-5.2-5.2H11c-2.9 0-5.2 2.3-5.2 5.2v18.7c0 2.9 2.3 5.2 5.2 5.2h18.7c2.8-.1 5.1-2.4 5.1-5.2zM39.2 15v16.1c0 4.5-3.7 8.2-8.2 8.2H14.9c-.6 0-.9.7-.5 1.1 1 1.1 2.4 1.8 4.1 1.8h13.4c5.7 0 10.3-4.6 10.3-10.3V18.5c0-1.6-.7-3.1-1.8-4.1-.5-.4-1.2 0-1.2.6z"></path></svg>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/atikh-bana-Ycds6emp7BA-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Secuencia" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="22" role="img" viewBox="0 0 48 48" width="22"><title>Secuencia</title><path d="M34.8 29.7V11c0-2.9-2.3-5.2-5.2-5.2H11c-2.9 0-5.2 2.3-5.2 5.2v18.7c0 2.9 2.3 5.2 5.2 5.2h18.7c2.8-.1 5.1-2.4 5.1-5.2zM39.2 15v16.1c0 4.5-3.7 8.2-8.2 8.2H14.9c-.6 0-.9.7-.5 1.1 1 1.1 2.4 1.8 4.1 1.8h13.4c5.7 0 10.3-4.6 10.3-10.3V18.5c0-1.6-.7-3.1-1.8-4.1-.5-.4-1.2 0-1.2.6z"></path></svg>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/etienne-boulanger-6-KiGzRZoeg-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Vídeo" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="18" role="img" viewBox="0 0 24 24" width="18"><title>Vídeo</title><path d="M5.888 22.5a3.46 3.46 0 0 1-1.721-.46l-.003-.002a3.451 3.451 0 0 1-1.72-2.982V4.943a3.445 3.445 0 0 1 5.163-2.987l12.226 7.059a3.444 3.444 0 0 1-.001 5.967l-12.22 7.056a3.462 3.462 0 0 1-1.724.462Z"></path></svg>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/mathew-schwartz-Kyxejaf39vM-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Secuencia" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="22" role="img" viewBox="0 0 48 48" width="22"><title>Secuencia</title><path d="M34.8 29.7V11c0-2.9-2.3-5.2-5.2-5.2H11c-2.9 0-5.2 2.3-5.2 5.2v18.7c0 2.9 2.3 5.2 5.2 5.2h18.7c2.8-.1 5.1-2.4 5.1-5.2zM39.2 15v16.1c0 4.5-3.7 8.2-8.2 8.2H14.9c-.6 0-.9.7-.5 1.1 1 1.1 2.4 1.8 4.1 1.8h13.4c5.7 0 10.3-4.6 10.3-10.3V18.5c0-1.6-.7-3.1-1.8-4.1-.5-.4-1.2 0-1.2.6z"></path></svg>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <div class="bg-[url('/images/nils-nedel-ONpGBpns3cs-unsplash.webp')] bg-cover bg-center bg-no-repeat object-cover flex flex-col justify-between p-[10px] h-[250px] w-full">
+                    <div class="flex justify-end m-3">
+                        <svg aria-label="Vídeo" class="x1lliihq x1n2onr6" color="rgb(255, 255, 255)" fill="rgb(255, 255, 255)" height="18" role="img" viewBox="0 0 24 24" width="18"><title>Vídeo</title><path d="M5.888 22.5a3.46 3.46 0 0 1-1.721-.46l-.003-.002a3.451 3.451 0 0 1-1.72-2.982V4.943a3.445 3.445 0 0 1 5.163-2.987l12.226 7.059a3.444 3.444 0 0 1-.001 5.967l-12.22 7.056a3.462 3.462 0 0 1-1.724.462Z"></path></svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+        </div>
+        </main>
+        <Footer />
+        <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="../app.js"></script>
+    </body>
+</html>
